@@ -90,7 +90,7 @@ public class Joueur
             else
                 System.out.println("\nLe vainqueur du combat est " + this.nom + ", le perdant est " + player.getNom());
         }
-        else
+        else if(attackingPlayerDamage < attackedPlayerDamage)
         {
             player.setSante(player.getForce() + 1);
             this.sante -= 1;
@@ -102,6 +102,10 @@ public class Joueur
             }
             else
                 System.out.println("\nLe vainqueur du combat est " + player.getNom() + ", le perdant est " + this.nom);
+        }
+        else
+        {
+            System.out.println("Match nul !");
         }
     }
 
